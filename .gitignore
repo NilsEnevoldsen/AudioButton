@@ -1,0 +1,11 @@
+.*.swp
+*~
+/.project
+/composer.lock
+/vendor
+/node_modules
+resources/.Rhistory
+resources/.DS_Store
+.DS_Store
+*.pem
+/.vscode

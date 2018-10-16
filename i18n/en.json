@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nils Enevoldsen"
+		]
+	},
+	"audiobutton-desc": "Creates a one-button play/pause toggle for an uploaded audio file"
+}

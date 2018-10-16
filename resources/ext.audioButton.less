@@ -1,0 +1,9 @@
+a.ext-audiobutton {
+	text-decoration: none;
+	&[ data-state='play' ]:before {
+		content: '▶️';
+	}
+	&[ data-state='pause' ]:before {
+		content: '⏸️';
+	}
+}

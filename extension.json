@@ -1,0 +1,43 @@
+{
+	"name": "AudioButton",
+	"version": "0.1.0",
+	"author": [
+		"Nils Enevoldsen"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:AudioButton",
+	"descriptionmsg": "audiobutton-desc",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"AutoloadClasses": {
+		"MediaWiki\\Extension\\AudioButton\\Hooks": "src/Hooks.php",
+		"MediaWiki\\Extension\\AudioButton\\SpecialHelloWorld": "src/SpecialHelloWorld.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "MediaWiki\\Extension\\AudioButton\\Hooks::onParserFirstCallInit"
+	},
+	"MessagesDirs": {
+		"AudioButton": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.audioButton": {
+			"scripts": [
+				"ext.audioButton.js"
+			],
+			"styles": [
+				"ext.audioButton.less"
+			],
+			"messages": [],
+			"dependencies": []
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "AudioButton/resources"
+	},
+	"manifest_version": 2
+}
