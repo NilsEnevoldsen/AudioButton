@@ -1,4 +1,12 @@
 ( function () {
+	function deactivate( button ) {
+		var audio = button.previousElementSibling;
+		button.dataset.state = 'error';
+		button.title = 'Audio type not supported';
+		button.href = audio.firstElementChild.src;
+		audio.remove();
+	}
+
 	function updateButtonState( event ) {
 		var audio = event.currentTarget,
 			button = audio.nextElementSibling;
@@ -20,14 +28,21 @@
 	}
 
 	$( function () {
-		document.querySelectorAll( 'a.ext-audiobutton' ).forEach( function ( el ) {
-			el.addEventListener( 'click', playPause );
+		document.querySelectorAll( 'a.ext-audiobutton' ).forEach( function ( button ) {
+			var audio = button.previousElementSibling;
+			if ( button.dataset.state === 'error' ) {
+				return;
+			} else if ( audio.canPlayType( audio.firstElementChild.type ) ) {
+				button.addEventListener( 'click', playPause );
+			} else {
+				deactivate( button );
+			}
 		} );
 
-		document.querySelectorAll( 'audio.ext-audiobutton' ).forEach( function ( el ) {
-			el.addEventListener( 'play', updateButtonState );
-			el.addEventListener( 'pause', updateButtonState );
-			el.addEventListener( 'ended', updateButtonState );
+		document.querySelectorAll( 'audio.ext-audiobutton' ).forEach( function ( audio ) {
+			audio.addEventListener( 'play', updateButtonState );
+			audio.addEventListener( 'pause', updateButtonState );
+			audio.addEventListener( 'ended', updateButtonState );
 		} );
 	}() );
 }() );

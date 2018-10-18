@@ -56,6 +56,7 @@ class Hooks {
 
 		if ( $file ) {
 			$url = $file->getFullURL();
+			$mimetype = $file->getMimeType();
 
 			$vol = $args['vol'] ?? '1.0';
 
@@ -63,12 +64,15 @@ class Hooks {
 			$output .= ' hidden';
 			$output .= ' class="ext-audiobutton"';
 			$output .= ' data-volume="' . $vol . '">';
-			$output .= '<source src="' . $url . '">';
+			$output .= '<source src="' . $url . '" type="' . $mimetype . '">';
+			$output .= '<a href="' . $url . '">Link</a>';
 			$output .= '</audio>';
 			$output .= '<a';
 			$output .= ' class="ext-audiobutton"';
 			$output .= ' data-state="play"';
 			$output .= ' title="Play/Pause"></a>';
+		} else {
+			$output .= '<a class="ext-audiobutton" data-state="error" title="File not found"></a>';
 		}
 
 		return $output;

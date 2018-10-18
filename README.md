@@ -40,6 +40,11 @@ a.ext-audiobutton[ data-state='play' ]:hover:before {
 a.ext-audiobutton[ data-state='pause' ]:hover:before {
     color: #8b0000;
 }
+/* This applies to "error" buttons */
+a.ext-audiobutton[ data-state='error' ]:before {
+    color: #000;
+    content: '\f071';
+}
 ```
 
 For reference, this will override the following default style:
