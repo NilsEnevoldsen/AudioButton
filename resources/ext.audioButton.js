@@ -20,7 +20,6 @@
 	function playPause( event ) {
 		var audio = event.currentTarget.previousElementSibling;
 		if ( audio.paused || audio.ended ) {
-			audio.volume = audio.dataset.volume;
 			audio.play();
 		} else {
 			audio.pause();
@@ -40,6 +39,7 @@
 		} );
 
 		document.querySelectorAll( 'audio.ext-audiobutton' ).forEach( function ( audio ) {
+			audio.volume = audio.dataset.volume;
 			audio.addEventListener( 'play', updateButtonState );
 			audio.addEventListener( 'pause', updateButtonState );
 			audio.addEventListener( 'ended', updateButtonState );
