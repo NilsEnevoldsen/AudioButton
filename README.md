@@ -10,6 +10,8 @@ Running `npm test` and `composer test` will run automated code checks.
 
 If you want to hack on this, whatever you're looking for is probably in `extension.json`, `/resources`, or `/src`.
 
+[Volume is optionally controlled](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volume) with a `vol` parameter: `<ab vol="0.45">foo.mp3</ab>`
+
 The buttons can be styled by modifying MediaWiki:Common.css. For example:
 ```css
 @import 'https://use.fontawesome.com/releases/v5.4.1/css/all.css';
@@ -56,6 +58,9 @@ a.ext-audiobutton {
 	}
 	&[ data-state='pause' ]:before {
 		content: '⏸️';
+	}
+	&[ data-state='error' ]:before {
+		content: '❓️';
 	}
 }
 ```
