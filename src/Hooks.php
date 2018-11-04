@@ -32,6 +32,7 @@ class Hooks {
 	 */
 	public static function onParserFirstCallInit( &$parser ) {
 		$parser->setHook( 'ab', 'MediaWiki\Extension\AudioButton\Hooks::renderAudioButton' );
+		$parser->setHook( 'sm2', 'MediaWiki\Extension\AudioButton\Hooks::renderAudioButton' );
 		return true;
 	}
 
