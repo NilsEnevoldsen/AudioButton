@@ -28,6 +28,7 @@
 
 	$( function () {
 		document.querySelectorAll( 'a.ext-audiobutton' ).forEach( function ( button ) {
+			button.innerHTML = '';
 			var audio = button.previousElementSibling;
 			if ( button.dataset.state === 'error' ) {
 				return;

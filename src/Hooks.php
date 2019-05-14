@@ -70,7 +70,7 @@ class Hooks {
 			$output .= '<a';
 			$output .= ' class="ext-audiobutton"';
 			$output .= ' data-state="play"';
-			$output .= ' title="Play/Pause"></a>';
+			$output .= ' title="Play/Pause">▶️</a>';
 		} else {
 			$output = '<a class="ext-audiobutton" data-state="error" title="File not found"></a>';
 		}
