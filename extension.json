@@ -32,7 +32,11 @@
 				"ext.audioButton.less"
 			],
 			"messages": [],
-			"dependencies": []
+			"dependencies": [],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
