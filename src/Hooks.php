@@ -60,7 +60,8 @@ class Hooks {
 
 			$vol = $args['vol'] ?? '1.0';
 
-			$output = '<audio';
+			$output = '<span>';
+			$output .= '<audio';
 			$output .= ' hidden';
 			$output .= ' class="ext-audiobutton"';
 			$output .= ' data-volume="' . $vol . '">';
@@ -71,6 +72,7 @@ class Hooks {
 			$output .= ' class="ext-audiobutton"';
 			$output .= ' data-state="play"';
 			$output .= ' title="Play/Pause">▶️</a>';
+			$output .= '</span>';
 		} else {
 			$output = '<a class="ext-audiobutton" data-state="error" title="File not found"></a>';
 		}
