@@ -72,6 +72,7 @@ class Hooks {
 			$output .= ' class="ext-audiobutton"';
 			$output .= ' data-state="play"';
 			$output .= ' title="Play/Pause">▶️</a>';
+			$parser->getOutput()->addImage( $file->getTitle()->getDBkey(), $file->getTimestamp(), $file->getSha1() );
 		} else {
 			$output = '<a class="ext-audiobutton" data-state="error" title="File not found"></a>';
 		}
