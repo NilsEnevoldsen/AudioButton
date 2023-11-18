@@ -59,7 +59,7 @@ class Hooks {
 			$mimetype = $file->getMimeType();
 
 			$vol = $args['vol'] ?? '1.0';
-			$preload = $args['preload'] ?? 'auto';
+			$preload = $args['preload'] ?? 'metadata';
 
 			$output = '<span>';
 			$output .= '<audio';
