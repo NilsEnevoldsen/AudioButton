@@ -27,9 +27,9 @@
 	}
 
 	$( function () {
-		document.querySelectorAll( 'a.ext-audiobutton' ).forEach( function ( button ) {
-			button.innerHTML = '';
+		Array.prototype.forEach.call( document.querySelectorAll( 'a.ext-audiobutton' ), function ( button ) {
 			var audio = button.previousElementSibling;
+			button.innerHTML = '';
 			if ( button.dataset.state === 'error' ) {
 				return;
 			} else if ( audio.canPlayType( audio.firstElementChild.type ) ) {
@@ -39,7 +39,7 @@
 			}
 		} );
 
-		document.querySelectorAll( 'audio.ext-audiobutton' ).forEach( function ( audio ) {
+		Array.prototype.forEach.call( document.querySelectorAll( 'audio.ext-audiobutton' ), function ( audio ) {
 			audio.volume = audio.dataset.volume;
 			audio.addEventListener( 'play', updateButtonState );
 			audio.addEventListener( 'pause', updateButtonState );
