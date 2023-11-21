@@ -12,6 +12,8 @@ If you want to hack on this, whatever you're looking for is probably in `extensi
 
 [Volume is optionally controlled](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volume) with a `vol` parameter: `<ab vol="0.45">foo.mp3</ab>`
 
+[Preload is optionally controlled](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#preload) with a `preload` parameter: `<ab preload="none">foo.mp3</ab>`
+
 The buttons can be styled by modifying MediaWiki:Common.css or MediaWiki:Universal.css. For example:
 ```css
 @import 'https://use.fontawesome.com/releases/v5.4.1/css/all.css';
