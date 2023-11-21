@@ -60,11 +60,13 @@ class Hooks {
 			$mimetype = $file->getMimeType();
 
 			$vol = $args['vol'] ?? '1.0';
+			$preload = $args['preload'] ?? 'metadata';
 
 			$output = '<span>';
 			$output .= '<audio';
 			$output .= ' hidden';
 			$output .= ' class="ext-audiobutton"';
+			$output .= ' preload="' . $preload . '"';
 			$output .= ' data-volume="' . $vol . '">';
 			$output .= '<source src="' . $url . '" type="' . $mimetype . '">';
 			$output .= '<a href="' . $url . '">Link</a>';
