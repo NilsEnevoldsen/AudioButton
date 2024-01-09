@@ -2,7 +2,7 @@
 	function deactivate( button ) {
 		var audio = button.previousElementSibling;
 		button.dataset.state = 'error';
-		button.title = 'Audio type not supported';
+		button.title = mw.message( 'audiobutton-error-not-supported' ).text();
 		button.href = audio.firstElementChild.src;
 		audio.remove();
 	}

@@ -4,5 +4,10 @@
 			"Nils Enevoldsen"
 		]
 	},
-	"audiobutton-desc": "Creates a one-button play/pause toggle for an uploaded audio file"
+	"audiobutton-desc": "Creates a one-button play/pause toggle for an uploaded audio file",
+
+	"audiobutton-play-pause": "Play/Pause",
+	"audiobutton-link": "Link",
+	"audiobutton-error-not-found": "File not found",
+	"audiobutton-error-not-supported": "Audio type not supported"
 }
