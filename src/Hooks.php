@@ -19,6 +19,8 @@
 
 namespace MediaWiki\Extension\AudioButton;
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Hooks for AudioButton extension
  */
@@ -52,7 +54,7 @@ class Hooks {
 			return '';
 		}
 
-		$file = wfFindFile( $input );
+		$file = MediaWikiServices::getInstance()->getRepoGroup()->findFile( $input );
 
 		if ( $file ) {
 			$url = $file->getFullURL();
