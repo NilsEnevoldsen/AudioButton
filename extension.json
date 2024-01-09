@@ -1,6 +1,6 @@
 {
 	"name": "AudioButton",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"author": [
 		"Nils Enevoldsen"
 	],
@@ -9,7 +9,7 @@
 	"license-name": "MIT",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": ">= 1.34.0"
 	},
 	"AutoloadClasses": {
 		"MediaWiki\\Extension\\AudioButton\\Hooks": "src/Hooks.php",
@@ -31,7 +31,9 @@
 			"styles": [
 				"ext.audioButton.less"
 			],
-			"messages": [],
+			"messages": [
+				"audiobutton-error-not-supported"
+			],
 			"dependencies": [],
 			"targets": [
 				"desktop",
