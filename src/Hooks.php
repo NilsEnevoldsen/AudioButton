@@ -60,8 +60,8 @@ class Hooks {
 			$url = $file->getFullURL();
 			$mimetype = $file->getMimeType();
 
-			$vol = $args['vol'] ?? '1.0';
-			$preload = $args['preload'] ?? 'metadata';
+			$vol = floatval( $args['vol'] ?? '1.0' );
+			$preload = htmlspecialchars( $args['preload'] ?? 'metadata' );
 
 			$output = '<span>';
 			$output .= '<audio';
