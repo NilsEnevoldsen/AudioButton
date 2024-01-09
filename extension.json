@@ -31,7 +31,9 @@
 			"styles": [
 				"ext.audioButton.less"
 			],
-			"messages": [],
+			"messages": [
+				"audiobutton-error-not-supported"
+			],
 			"dependencies": [],
 			"targets": [
 				"desktop",

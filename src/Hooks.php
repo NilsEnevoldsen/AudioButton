@@ -70,16 +70,16 @@ class Hooks {
 			$output .= ' preload="' . $preload . '"';
 			$output .= ' data-volume="' . $vol . '">';
 			$output .= '<source src="' . $url . '" type="' . $mimetype . '">';
-			$output .= '<a href="' . $url . '">Link</a>';
+			$output .= '<a href="' . $url . '">' . wfMessage( 'audiobutton-link' )->text() . '</a>';
 			$output .= '</audio>';
 			$output .= '<a';
 			$output .= ' class="ext-audiobutton"';
 			$output .= ' data-state="play"';
-			$output .= ' title="Play/Pause">▶️</a>';
+			$output .= ' title="' . wfMessage( 'audiobutton-play-pause' )->text() . '">▶️</a>';
 			$output .= '</span>';
 			$parser->getOutput()->addImage( $file->getTitle()->getDBkey(), $file->getTimestamp(), $file->getSha1() );
 		} else {
-			$output = '<a class="ext-audiobutton" data-state="error" title="File not found"></a>';
+			$output = '<a class="ext-audiobutton" data-state="error" title="' . wfMessage( 'audiobutton-error-not-found' )->text() . '"></a>';
 		}
 
 		return $output;
