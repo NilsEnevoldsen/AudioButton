@@ -79,7 +79,8 @@ class Hooks {
 			$output .= '</span>';
 			$parser->getOutput()->addImage( $file->getTitle()->getDBkey(), $file->getTimestamp(), $file->getSha1() );
 		} else {
-			$output = '<a class="ext-audiobutton" data-state="error" title="' . wfMessage( 'audiobutton-error-not-found' )->text() . '"></a>';
+			$output = '<a class="ext-audiobutton" data-state="error" title="' 
+				. wfMessage( 'audiobutton-error-not-found' )->text() . '"></a>';
 		}
 
 		return $output;
