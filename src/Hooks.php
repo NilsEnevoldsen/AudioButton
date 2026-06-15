@@ -48,7 +48,7 @@ class Hooks {
 	 */
 	public static function renderAudioButton( $input, array $args, $parser, $frame ) {
 		$parser->getOutput()->addModules( [ 'ext.audioButton' ] );
-		$input = $parser->recursiveTagParse( $input, $frame );
+		$input = trim( $parser->recursiveTagParse( $input, $frame ) );
 
 		if ( !$input ) {
 			return '';
